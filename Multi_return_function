@@ -1,0 +1,4 @@
+def math_operations(x, y):
+    sum = x + y
+    mul = x * y
+    return sum, mul
