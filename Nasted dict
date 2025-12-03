@@ -1,0 +1,4 @@
+students = {
+    "student1": {"name": "Latif", "age": 18},
+    "student2": {"name": "Hamid", "age": 20}
+}
