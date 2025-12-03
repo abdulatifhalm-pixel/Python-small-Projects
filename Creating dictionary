@@ -1,0 +1,5 @@
+my_dict = {
+    "name": "Ali",
+    "age": 20,
+    "country": "Afghanistan"
+}
