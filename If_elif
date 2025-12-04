@@ -1,0 +1,10 @@
+marks = 85
+
+if marks >= 90:
+    print("A درجه")
+elif marks >= 80:
+    print("B درجه")
+elif marks >= 70:
+    print("C درجه")
+else:
+    print("ناکام")
