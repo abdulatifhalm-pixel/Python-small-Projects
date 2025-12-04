@@ -1,0 +1,23 @@
+✅ *Python Advanced Concepts Quiz Answers with Explanation* 🧠🐍
+
+*1️⃣ What does a Python generator return?*  
+*✔️ Answer: C. Iterator*  
+*Explanation:* Generators return iterator objects that yield values one at a time using `yield`. They don’t store all values in memory.
+
+*2️⃣ What keyword is used to define a generator function?*  
+*✔️ Answer: B. yield*  
+*Explanation:* `yield` is used inside a function to make it a generator. Each time `yield` runs, it returns a value and pauses the function’s state.
+
+*3️⃣ What is a decorator used for in Python?*  
+*✔️ Answer: C. To modify functions or methods*  
+*Explanation:* Decorators wrap another function to add or modify its behavior without changing its source code (e.g., logging, authentication).
+
+*4️⃣ Which method is used to open a file that automatically closes it?*  
+*✔️ Answer: B. with open()*  
+*Explanation:* `with open()` is a context manager. It opens the file and closes it automatically, even if an error occurs.
+
+*5️⃣ What does `_enter_` and `_exit_` relate to?*  
+*✔️ Answer: C. Context managers*  
+*Explanation:* These are special methods used in custom context managers to define setup (`_enter_`) and teardown (`_exit_`) actions.
+
+💬 *Double Tap ♥️ For More!*
