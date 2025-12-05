@@ -1,0 +1,4 @@
+names = ["Ali", "Hamid", "Latif"]
+
+if "Latif" in names:
+    print("Latif په لیست کې شته")
