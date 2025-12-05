@@ -1,0 +1,3 @@
+numbers = [1, 2, 3, 4, 5]
+names = ["Latif", "Hamid", "Hilal"]
+mixed = [10, "Ali", True, 5.5]   # مخلوط لیست
