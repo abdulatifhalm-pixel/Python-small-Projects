@@ -1,0 +1,4 @@
+name = "Latif"
+
+if name == "Latif":
+    print("ښه راغلې عبد اللطیفه!")
