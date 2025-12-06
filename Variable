@@ -1,0 +1,7 @@
+name = "Abdul Latif"
+age = 20
+country = "Afghanistan"
+
+print("Name:", name)
+print("Age:", age)
+print("Country:", country)
