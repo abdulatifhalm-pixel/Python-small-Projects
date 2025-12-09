@@ -1,0 +1,11 @@
+# Python Dictionary Methods (په پښتو تشریح)
+
+## Dictionary څه شی دی؟
+Dictionary یو داسې ډاټا ټایپ دی چې معلومات د **Key : Value** په بڼه ذخیره کوي.
+
+```python
+student = {
+    "name": "Ali",
+    "age": 20,
+    "grade": "A"
+}
