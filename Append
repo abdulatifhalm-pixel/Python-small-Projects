@@ -1,0 +1,8 @@
+# List مثال
+my_list = [1, 2, 3]
+my_list.append(4)  # اضافه کول
+print(my_list)     # Output: [1, 2, 3, 4]
+
+# Tuple مثال
+my_tuple = (1, 2, 3)
+# my_tuple[0] = 5  # دا به خطا ورکړي، ځکه Tuple تغیرېدونکی نه دی
