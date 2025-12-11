@@ -1,0 +1,11 @@
+# Set جوړول
+my_set = {1, 2, 3, 4}
+print(my_set)  # Output: {1, 2, 3, 4} ترتیب ثابت نه دی
+
+# عنصر اضافه کول
+my_set.add(5)
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+
+# Duplicate اضافه کول نادیده نیول کیږي
+my_set.add(3)
+print(my_set)  # Output: {1, 2, 3, 4, 5}
