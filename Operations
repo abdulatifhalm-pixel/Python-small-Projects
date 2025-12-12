@@ -1,0 +1,6 @@
+fruits = ["apple", "banana", "orange"]
+
+fruits.append("mango")
+
+for fruit in fruits:
+    print(fruit)
