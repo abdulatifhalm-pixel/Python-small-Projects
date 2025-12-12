@@ -1,0 +1,9 @@
+python-basics/
+│── hello_world.py
+│── variables_and_types.py
+│── simple_calculator.py
+│── if_else_example.py
+│── loop_examples.py
+│── list_operations.py
+│── dictionary_example.py
+│── functions.py
