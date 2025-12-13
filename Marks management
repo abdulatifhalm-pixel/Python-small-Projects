@@ -1,0 +1,11 @@
+students = {
+    "Ali": 85,
+    "Ahmad": 90,
+    "Sara": 78
+}
+
+def get_average(marks):
+    return sum(marks.values()) / len(marks)
+
+print("Students Marks:", students)
+print("Average Marks:", get_average(students))
