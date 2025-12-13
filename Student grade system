@@ -1,0 +1,29 @@
+# Student Grade System
+
+students = {}
+
+def add_student(name, marks):
+    students[name] = marks
+
+def calculate_grade(marks):
+    if marks >= 90:
+        return "A"
+    elif marks >= 75:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    else:
+        return "Fail"
+
+while True:
+    name = input("Enter student name (or 'exit' to quit): ")
+    if name.lower() == "exit":
+        break
+
+    marks = int(input("Enter marks: "))
+    add_student(name, marks)
+
+print("\nStudent Results:")
+for name, marks in students.items():
+    grade = calculate_grade(marks)
+    print(f"{name} → Marks: {marks}, Grade: {grade}")
