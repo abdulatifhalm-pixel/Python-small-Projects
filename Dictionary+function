@@ -1,0 +1,26 @@
+students = {}
+
+def add_student(name, marks):
+    students[name] = marks
+
+def show_students():
+    for name, marks in students.items():
+        print(name, ":", marks)
+
+while True:
+    print("\n1. Add Student")
+    print("2. Show Students")
+    print("3. Exit")
+
+    choice = input("Choose option: ")
+
+    if choice == "1":
+        name = input("Student name: ")
+        marks = int(input("Marks: "))
+        add_student(name, marks)
+    elif choice == "2":
+        show_students()
+    elif choice == "3":
+        break
+    else:
+        print("Invalid option")
