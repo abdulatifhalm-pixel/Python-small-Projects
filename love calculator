@@ -1,0 +1,15 @@
+from _collections import
+
+name_1=input("enter your name"),
+name_2=input("enter your name"),
+com=input("enter your comment"),
+find= count () in name_1 and name_2 in name_1
+find_def= name_1 and name_2
+letters=True
+if name_1 and  name_2 == letters ==True :
+    print("print the love is best")
+else:
+    print('love is worse')
+add=int(1+2)
+value= count(character in (name_1 and name_2))
+print(value)
