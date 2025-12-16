@@ -1,0 +1,53 @@
+import sqlite3
+
+# Connect to database
+conn = sqlite3.connect("hospital.db")
+cursor = conn.cursor()
+
+# Create tables
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS patients (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER,
+    gender TEXT,
+    disease TEXT
+)
+""")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS doctors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    specialty TEXT
+)
+""")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS appointments (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    patient_id INTEGER,
+    doctor_id INTEGER,
+    date TEXT
+)
+""")
+
+# Get all data
+def get_all_information():
+    print("\n--- Patients ---")
+    for row in cursor.execute("SELECT * FROM patients"):
+        print(row)
+
+    print("\n--- Doctors ---")
+    for row in cursor.execute("SELECT * FROM doctors"):
+        print(row)
+
+    print("\n--- Appointments ---")
+    for row in cursor.execute("SELECT * FROM appointments"):
+        print(row)
+
+# Run function
+get_all_information()
+
+# Close connection
+conn.close()
