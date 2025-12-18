@@ -1,0 +1,33 @@
+import sqlite3
+conn = sqlite3.connect("airport.db")
+cursor = conn.cursor()
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS airports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    city TEXT,
+    country TEXT,
+    iata_code TEXT,
+    icao_code TEXT
+)
+""")
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS flights (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    flight_number TEXT,
+    from_airport TEXT,
+    to_airport TEXT,
+    departure_time TEXT
+)
+""")
+# Function to get all airport system information
+def get_all_information():
+    print("\n--- Airports ---")
+    for row in cursor.execute("SELECT * FROM airports"):
+        print(row)
+
+    print("\n--- Flights ---")
+    for row in cursor.execute("SELECT * FROM flights"):
+        print(row)
+get_all_information()
+conn.close()
