@@ -1,0 +1,53 @@
+import sqlite3
+
+# Connect to database
+conn = sqlite3.connect("shop.db")
+cursor = conn.cursor()
+
+# Create tables
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS products (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    price REAL,
+    quantity INTEGER
+)
+""")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS customers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    phone TEXT
+)
+""")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS sales (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    product_id INTEGER,
+    customer_id INTEGER,
+    quantity INTEGER,
+    sale_date TEXT
+)
+""")
+
+# Function to get all shop information
+def get_all_information():
+    print("\n--- Products ---")
+    for row in cursor.execute("SELECT * FROM products"):
+        print(row)
+
+    print("\n--- Customers ---")
+    for row in cursor.execute("SELECT * FROM customers"):
+        print(row)
+
+    print("\n--- Sales ---")
+    for row in cursor.execute("SELECT * FROM sales"):
+        print(row)
+
+# Run function
+get_all_information()
+
+# Close database
+conn.close()
