@@ -1,0 +1,65 @@
+✅ *Python Coding Interview Questions with Answers. Part-8* 🐍💻
+
+1️⃣ *Check if Number Is Power of Two*  
+*Q:* Determine whether a number is a power of two.  
+```python
+def is_power_of_two(n):
+    return n > 0 and (n & (n - 1)) == 0
+
+print(is_power_of_two(16))  # True
+print(is_power_of_two(18))  # False
+```
+
+2️⃣ *Remove All Whitespaces from String*  
+*Q:* Remove spaces, tabs, and newlines from a string.  
+```python
+def remove_spaces(s):
+    return "".join(s.split())
+
+print(remove_spaces("Py th on \n"))  # Python
+```
+
+3️⃣ *Find First Non-Repeating Character*  
+*Q:* Return the first character that does not repeat.  
+```python
+from collections import Counter
+
+def first_unique(s):
+    freq = Counter(s)
+    for c in s:
+        if freq[c] == 1:
+            return c
+    return None
+
+print(first_unique("swiss"))  # w
+```
+
+4️⃣ *Rotate List by k Positions*  
+*Q:* Rotate a list to the right by k steps.  
+```python
+def rotate_list(lst, k):
+    k %= len(lst)
+    return lst[-k:] + lst[:-k]
+
+print(rotate_list([1, 2, 3, 4, 5], 2))  # [4, 5, 1, 2, 3]
+```
+
+5️⃣ *Check Balanced Parentheses*  
+*Q:* Check whether parentheses are balanced.  
+```python
+def is_balanced(s):
+    stack = []
+    pairs = {')': '(', ']': '[', '}': '{'}
+    for c in s:
+        if c in pairs.values():
+            stack.append(c)
+        elif c in pairs:
+            if not stack or stack.pop() != pairs[c]:
+                return False
+    return not stack
+
+print(is_balanced("({[]})"))  # True
+print(is_balanced("({[})"))   # False
+```
+
+💬 *Double Tap ❤️ for Part-9*
