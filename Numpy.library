@@ -1,0 +1,136 @@
+*Python Libraries You Should Know ✅*
+
+*🔹 1. NumPy: Numerical Computing ⚙️*
+
+NumPy is the foundation for numerical operations in Python. It provides fast arrays and math functions.
+
+*Example:*
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3])
+print(arr * 2)  # [2 4 6]
+```
+
+*Challenge:* Create a 3x3 matrix of random integers from 1–10.
+```python
+matrix = np.random.randint(1, 11, size=(3, 3))
+print(matrix)
+```
+
+*🔹 2. Pandas: Data Analysis 🐼*
+
+Pandas makes it easy to work with tabular data using DataFrames.
+
+*Example:*
+```python
+import pandas as pd
+
+data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+df = pd.DataFrame(data)
+print(df)
+```
+
+*Challenge:* Load a CSV file and show the top 5 rows.
+```python
+df = pd.read_csv('data.csv')
+print(df.head())
+```
+
+*🔹 3. Matplotlib: Data Visualization 📊*
+
+Matplotlib helps you create charts and plots.
+
+*Example:*
+```python
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3]
+y = [2, 4, 1]
+
+plt.plot(x, y)
+plt.title("Simple Line Plot")
+plt.show()
+```
+
+*Challenge:* Plot a bar chart of fruit sales.
+```python
+fruits = ['Apples', 'Bananas', 'Cherries']
+sales = [30, 45, 25]
+
+plt.bar(fruits, sales)
+plt.title("Fruit Sales")
+plt.show()
+```
+
+*🔹 4. Seaborn: Statistical Plots 🎨*
+
+Seaborn builds on Matplotlib with beautiful, high-level charts.
+
+*Example:*
+```python
+import seaborn as sns
+import pandas as pd
+
+tips = sns.load_dataset("tips")
+sns.boxplot(x="day", y="total_bill", data=tips)
+plt.show()
+```
+
+*Challenge:* Create a heatmap of correlation.
+```python
+corr = tips.corr()
+sns.heatmap(corr, annot=True, cmap="coolwarm")
+plt.show()
+```
+
+*🔹 5. Requests: HTTP for Humans 🌐*
+
+Requests makes it easy to send HTTP requests.
+
+*Example:*
+```python
+import requests
+
+response = requests.get("https://api.github.com")
+print(response.status_code)
+print(response.json())
+```
+
+*Challenge:* Fetch and print your IP address.
+```python
+res = requests.get("https://api.ipify.org?format=json")
+print(res.json()['ip'])
+```
+
+*🔹 6. Beautiful Soup: Web Scraping 🍜*
+
+Beautiful Soup helps you extract data from HTML pages.
+
+*Example:*
+```python
+from bs4 import BeautifulSoup
+import requests
+
+url = "https://example.com"
+html = requests.get(url).text
+soup = BeautifulSoup(html, "html.parser")
+
+print(soup.title.text)
+```
+
+*Challenge:* Extract all links from a webpage.
+```python
+links = soup.find_all('a')
+for link in links:
+    print(link.get('href'))
+```
+
+*📌 Next Steps:*
+- Combine these libraries for real-world projects
+- Try scraping data and analyzing it with Pandas
+- Visualize insights with Seaborn & Matplotlib
+
+*Python Roadmap:* https://whatsapp.com/channel/0029VaiM08SDuMRaGKd9Wv0L/2194
+
+*Double Tap ♥️ For More*
